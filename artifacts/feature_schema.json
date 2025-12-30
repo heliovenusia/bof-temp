@@ -1,0 +1,149 @@
+{
+  "features_ordered": [
+    "scrap",
+    "silicon",
+    "Mn",
+    "C",
+    "S",
+    "P",
+    "hot_metal_weight",
+    "blow_duration",
+    "lime",
+    "iron_ore",
+    "dolo",
+    "sinter",
+    "O2",
+    "basicity",
+    "FeO"
+  ],
+  "units": {
+    "scrap": "tonne",
+    "silicon": "%",
+    "Mn": "%",
+    "C": "%",
+    "S": "%",
+    "P": "%",
+    "hot_metal_weight": "tonne",
+    "blow_duration": "min",
+    "lime": "kg",
+    "iron_ore": "kg",
+    "dolo": "kg",
+    "sinter": "kg",
+    "O2": "Nm3",
+    "basicity": "ratio",
+    "FeO": "%"
+  },
+  "ranges": {
+    "scrap": {
+      "min": 0.0,
+      "max": 30.3
+    },
+    "silicon": {
+      "min": 0.0,
+      "max": 2.399
+    },
+    "Mn": {
+      "min": 0.0,
+      "max": 0.93
+    },
+    "C": {
+      "min": 0.0,
+      "max": 0.0
+    },
+    "S": {
+      "min": 0.0,
+      "max": 0.143
+    },
+    "P": {
+      "min": 0.0,
+      "max": 0.2
+    },
+    "hot_metal_weight": {
+      "min": 91.6,
+      "max": 180.5
+    },
+    "blow_duration": {
+      "min": 11.0,
+      "max": 49.0
+    },
+    "lime": {
+      "min": 3633.0,
+      "max": 15729.0
+    },
+    "iron_ore": {
+      "min": 0.0,
+      "max": 8790.0
+    },
+    "dolo": {
+      "min": 0.0,
+      "max": 4809.0
+    },
+    "sinter": {
+      "min": 0.0,
+      "max": 0.0
+    },
+    "O2": {
+      "min": 2497.0,
+      "max": 28690.0
+    },
+    "basicity": {
+      "min": 0.0,
+      "max": 9.18
+    },
+    "FeO": {
+      "min": 0.0,
+      "max": 55.0
+    }
+  },
+  "transforms": {
+    "hot_metal_weight": "UI in tonne; internally multiplied by 1000 (tonne\u2192kg)",
+    "standardization": "Inputs standardized using training mean/std (z-score) for stable inference"
+  },
+  "standardization_params": {
+    "mean": [
+      10.722900390625,
+      0.8349599838256836,
+      0.06988599896430969,
+      0.0,
+      0.036076001822948456,
+      0.12586399912834167,
+      121970.3046875,
+      24.899999618530273,
+      9379.6708984375,
+      2271.864990234375,
+      1205.9189453125,
+      0.0,
+      6600.2060546875,
+      2.062429904937744,
+      8.187599182128906
+    ],
+    "std": [
+      4.19732141494751,
+      0.31380027532577515,
+      0.04591556265950203,
+      1.0,
+      0.01452123373746872,
+      0.04432795196771622,
+      6215.66162109375,
+      7.763375759124756,
+      1446.8155517578125,
+      1368.0482177734375,
+      975.3626098632812,
+      1.0,
+      453.3668212890625,
+      1.2422409057617188,
+      9.862122535705566
+    ]
+  },
+  "target": {
+    "name": "temp",
+    "unit": "C"
+  },
+  "training": {
+    "tf_version": "2.19.0",
+    "rows_cleaned": 1320,
+    "train_rows": 1000,
+    "val_rows": 320,
+    "val_rmse_last_epoch": 111.22537231445312
+  }
+}
