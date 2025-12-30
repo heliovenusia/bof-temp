@@ -59,8 +59,7 @@ def sensitivity_contrib(payload, frac=0.01):
     dfc = dfc.sort_values("abs_delta", ascending=False).drop(columns=["abs_delta"]).reset_index(drop=True)
     return base, dfc
 
-st.title("BOF Tap Temperature Prediction – Operational Demo")
-st.caption("Legacy BOF temperature model converted into a deployable model artifact and accessed programmatically; PLC auto-fetch is the next integration step.")
+st.title("BOF Tap Temperature Prediction")
 
 tab1, tab2, tab3 = st.tabs(["Prediction Console", "Insights (Parameter Contribution)", "API View"])
 
@@ -139,7 +138,7 @@ with tab1:
 
         st.divider()
         st.caption(f"Model artifact: artifacts/bof_temp_model.keras")
-        st.caption(f"Feature contract: 15 features (order locked); hot_metal_weight is input in tonne, converted internally to kg (×1000).")
+        st.caption(f"Feature contract: 15 features")
 
 with tab2:
     st.subheader("Local Sensitivity Contribution (around current operating point)")
